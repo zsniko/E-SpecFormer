@@ -1,0 +1,20 @@
+dataset:
+  name: "RadioML2018" # "HT-CC"
+  num_classes: 5 # 5 for HT-CC
+
+model:
+  variant: "Nano"
+  d_model: 32
+  nhead: 8
+  num_layers: 1
+  dim_feedforward: 32
+  k: 16
+  s: 16
+  dtanh: true
+  linattn: true
+
+training:
+  epochs: 300
+  batch_size: 128
+  learning_rate: 0.001
+  patience: 30

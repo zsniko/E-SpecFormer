@@ -1,0 +1,20 @@
+dataset:
+  name: "RadioML2018"
+  num_classes: 24
+
+model:
+  variant: "Small"
+  d_model: 32
+  nhead: 8
+  num_layers: 2
+  dim_feedforward: 32
+  k: 16
+  s: 16
+  dtanh: true
+  linattn: true
+
+training:
+  epochs: 300
+  batch_size: 512
+  learning_rate: 0.001
+  patience: 100
