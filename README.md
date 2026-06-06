@@ -6,7 +6,7 @@
 
 Code repository for **E-SpecFormer** (Edge Spectrum monitoring Transformer), a super-lightweight Transformer family for end-to-end automatic modulation and covert channel recognition. 
 
-E-SpecFormer introduces **LiTAN** (Linear Tanh Attention Network), a Softmax- and LayerNorm-free attention mechanism that reduces computational complexity to linear time while increasing accuracy for RF tasks. The architecture is natively hardware-friendly and is designed for HW/SW co-design, enabling high-speed streaming inference of real-time spectrum intelligence and heterogeneous computing (CPU/FPGA) for extreme edge computing.
+E-SpecFormer utilizes Conv-Tokenizer and introduces **LiTAN** (Linear Tanh Attention Network), a Softmax- and LayerNorm-free attention mechanism that reduces computational complexity to linear time while increasing accuracy for RF tasks. The architecture is natively hardware-friendly and is designed for HW/SW co-design, enabling high-speed streaming inference of real-time spectrum intelligence and heterogeneous computing (CPU/FPGA) for extreme edge computing.
 
 ---
 
@@ -17,7 +17,7 @@ The models have been extensively tested on the **RadioML2018** (AMR) and **HT-CC
 ### RadioML2018 (AMR)
 **Input Shape:** `(B, 1, 2, 1024)`
 
-| Model | Avg Acc (> 0 dB) | ARM CPU* (ms) | FPGA** (µs) | Params.| kMACs | Pre-trained Weights |
+| Model | Avg. Accuracy (SNR > 0 dB) | ARM CPU* (ms) | FPGA** (µs) | Params.| kMACs | Pre-trained Weights |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | E-SpecFormer-N | 86.5% | 0.33 | 124 | 8,314 | 501 | [nano.pt](models/amr/Nano.pt) |
 | E-SpecFormer-S | 89.4% | 0.52 | 243 | 14,780 | 924 | [small.pt](models/amr/Small.pt) |
@@ -27,15 +27,15 @@ The models have been extensively tested on the **RadioML2018** (AMR) and **HT-CC
 ### HT-CC
 **Input Shape:** `(B, 1, 2, 640)`
 
-| Model | Avg Acc (> 0 dB) | ARM CPU* (ms) | FPGA** (µs) | Params.| kMACs | Pre-trained Weights |
+| Model | Avg. Accuracy (SNR > 0 dB) | ARM CPU* (ms) | FPGA** (µs) | Params.| kMACs | Pre-trained Weights |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | E-SpecFormer-N | 94.2% | 0.24 | 92 | 7,687 | 312 | [nano.pt](models/htcc/Nano.pt) |
 | E-SpecFormer-S | 95.7% | 0.38 | 181 | 14,153 | 577 | [small.pt](models/htcc/Small.pt) |
 | E-SpecFormer-M | 96.1% | 1.04 | 359 | 35,405 | 2,854 | [medium.pt](models/htcc/Medium.pt) |
 | E-SpecFormer-L | 96.9% | 2.04 | 537 | 115,601 | 9,355 | [large.pt](models/htcc/Large.pt) |
 
-> \* **ARM CPU Latency:** Evaluated on an ARM Cortex-A76 (Raspberry Pi 5).  
-> \*\* **FPGA Latency:** Evaluated on a Xilinx Zynq MPSoC ZCU104.
+> \* **ARM CPU Latency:** Evaluated with ONNX Runtime on ARM Cortex-A76 (Raspberry Pi 5).  
+> \*\* **FPGA Latency:** Evaluated on Xilinx Zynq MPSoC ZCU104 FPGA (ARM Cortex-A53 CPU + Custom Accelerator).
 
 ---
 
