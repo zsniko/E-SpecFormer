@@ -1,3 +1,6 @@
+// C source code of E-SpecFormer.
+// The code is designed to be compiled and run on any CPU for inference simulation.
+// W8A8 Dynamic Quant or W8A16 Static Quant is recommended to ensure optimal accuracy compared to floating-point baseline. 
 #define _GNU_SOURCE
 #include <time.h>
 
