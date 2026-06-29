@@ -89,3 +89,5 @@ Once the model is built, you can load the pre-trained weights from the `models/`
 model.load_state_dict(torch.load('models/amr/Nano.pt', map_location=device))
 model.eval()
 ```
+
+You can also export the model to ONNX Runtime or use and modify the C source code to compile and run on any CPU for inference test and mathematical evaluation only.
