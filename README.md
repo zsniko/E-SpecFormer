@@ -91,3 +91,9 @@ model.eval()
 ```
 
 You can also export the model to ONNX Runtime or use and modify the C source code to compile and run on any CPU for inference test and mathematical evaluation only.
+
+---
+
+Copyright &copy; 2026 Sorbonne Université, Centre National de la Recherche Scientifique (CNRS), Laboratoire d'Informatique de Paris 6 (LIP6).
+
+Licensed under the [Apache 2.0 License](LICENSE).
