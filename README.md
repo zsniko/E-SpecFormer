@@ -1,4 +1,4 @@
-# Edge-Efficient Transformer for End-to-End RF Spectrum Monitoring
+# [Edge-Efficient Transformer for End-to-End RF Spectrum Monitoring](https://ieeexplore.ieee.org/document/11593812/authors#authors)
 
 <p align="center">
   <img src="figures/acc_vs_snr.png" alt="Accuracy vs SNR" width="100%">
@@ -91,6 +91,16 @@ model.eval()
 ```
 
 You can also export the model to ONNX Runtime or use and modify the C source code to compile and run on any CPU for inference test and mathematical evaluation only.
+
+---
+
+
+## Citation
+
+If you use E-SpecFormer or find this work useful in your research, please consider citing our paper:
+
+> Z. Song, H.-G. Stratigopoulos and H. Aboushady, "Edge-Efficient Transformer for End-to-End RF Spectrum Monitoring," in *IEEE Transactions on Circuits and Systems II: Express Briefs*, 2026, doi: 10.1109/TCSII.2026.3709389.
+
 
 ---
 
