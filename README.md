@@ -1,4 +1,4 @@
-# [Edge-Efficient Transformer for End-to-End RF Spectrum Monitoring](https://ieeexplore.ieee.org/document/11593812)
+# [Edge-Efficient Transformer for End-to-End RF Spectrum Monitoring](https://arxiv.org/abs/2607.18285)
 
 <p align="center">
   <img src="figures/acc_vs_snr.png" alt="Accuracy vs SNR" width="100%">
